@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Guess-Me</title>
+    <link rel="stylesheet" href="lib/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="css/app.css" />
+</head>
+
+<body class="text-center">
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="img/layout/logo.png" width="40" height="28" class="d-inline-block align-text-top">
+                Guess Me
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active home-link" aria-current="page" href="#">Home</a>
+                    </li>
+                    <!--  -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Explore
+                        </a>
+                        <ul class="dropdown-menu text-center">
+                            <li><a class="dropdown-item nav-link contact-link text-dark" href="#">Contact
+                                    Us</a></li>
+                            <li><a class="dropdown-item nav-link about-link text-dark" href="#">About</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Carousel -->
+    <div id="carouselExampleControls" class="carousel slide mb-2" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="img/layout/gandhi .jpg" class="d-block w-100">
+            </div>
+            <div class="carousel-item">
+                <img src="img/layout/margol.jpg" class="d-block w-100">
+            </div>
+            <div class="carousel-item">
+                <img src="img/layout/eyal .jpg" class="d-block w-100">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- Start game section -->
+    <section class="game-start ">
+        <h2 class="display-1 mb-5">Think of Someone...</h2>
+        <button class="btn-warning btn-lg btn-start">I'm Ready!</button>
+    </section>
+
+    <!-- Question section -->
+    <section class="quest" style="display: none">
+        <h2 class="quest-txt display-2"></h2>
+        <button class="btn btn-success btn-lg btn-yes m-2">Yes</button>
+        <button class="btn btn-danger btn-lg btn-no m-2">No</button>
+    </section>
+
+    <!-- New question from user -->
+    <div class="form-container container-fluid new-quest mt-5" style="display: none">
+        <form class="ending-form">
+            <label class="w-100 mb-1 display4" for="newGuess">You thought of:</label>
+            <input class="w-50 mb-1 user-input" name="newGuess" type="txt" id="newQuest" placeholder="Your Guess"
+                required />
+
+            <label class="w-100 mb-1" for="newQuest">Question to differentiate:</label>
+            <input class="w-50 mb-3 user-input" name="newQuest" type="txt" id="newQuest"
+                placeholder="The answer is YES for yours" required />
+
+            <button type="submit" class="btn w-50 btn-primary btn-add-guess">Make me Smarter!</button>
+        </form>
+    </div>
+
+    <!-- Win Modal -->
+    <div class="modal win-modal" tabindex="-1" style="display:none">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center ">
+                    <p class="display-5">It's too easy...</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary modal-btn" data-bs-dismiss="modal">
+                        Play Again but grey</button>
+                    <button type="button" class="btn btn-primary modal-btn">Play Again</button>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- Lose Modal -->
+    <div class="modal lose-modal" tabindex="-1" style="display:none">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center ">
+                    <p>Lucky.. My AI algorithm got lazy</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-danger" data-bs-dismiss="modal">
+                        You can't escape !</button>
+                    <button type="button" class="btn btn-primary btn-success">Teach me your secrets senpai !</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="container-fluid bg-dark text-light text-center py-3 footer">
+        CoffeRights &copy; 2022
+    </div>
+
+    <script src="lib/bootstrap/bootstrap.bundel.js"></script>
+    <script src="lib/jquery/jquery.js"></script>
+    <script src="js/storage.service.js"></script>
+    <script src="js/quest.service.js"></script>
+    <script src="js/quest.controller.js"></script>
+</body>
+
+</html>

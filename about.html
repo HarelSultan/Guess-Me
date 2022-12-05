@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About us</title>
+    <link rel="stylesheet" href="lib/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="css/app.css" />
+</head>
+
+<body>
+    <!-- Nav bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="img/layout/logo.png" width="40" height="28" class="d-inline-block align-text-top">
+                Guess Me
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active home-link" aria-current="page" href="#">Home</a>
+                    </li>
+                    <!--  -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Explore
+                        </a>
+                        <ul class="dropdown-menu text-center">
+                            <li><a class="dropdown-item nav-link contact-link text-dark" href="#">Contact
+                                    Us</a></li>
+                            <li><a class="dropdown-item nav-link about-link text-dark" href="#">About</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- service-cards -->
+    <div class="services-container container text-center py-4">
+        <h2 class="display-3 mb-5">Services</h2>
+        <div class="row">
+            <div class="col-12 col-sm-4 mt-5">
+                <img src="img/layout/dont-call.png">
+                <h5>Don't call us !</h5>
+                <p>Don't call us, we won't call you.</p>
+            </div>
+            <div class="col-12 col-sm-4 mt-5">
+                <img src="img/layout/non-service.png">
+                <h5>Our Company Vision !</h5>
+                <p>In Guess Who, we believe in 24 hours non-customer-service</p>
+            </div>
+            <div class="col-12 col-sm-4 mt-5">
+                <img src="img/layout/money.png">
+                <h5>We only accept CASH!</h5>
+                <p>Shut up n give us your money..</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="container-fluid bg-dark text-light text-center py-3 footer">
+        CoffeRights &copy; 2022
+    </div>
+
+
+    <script src="lib/bootstrap/bootstrap.bundel.js"></script>
+    <script src="lib/jquery/jquery.js"></script>
+    <script src="js/storage.service.js"></script>
+    <script src="js/quest.service.js"></script>
+    <script src="js/quest.controller.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+body {
+    background: gainsboro;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+}
+
+img {
+    max-height: 344px;
+}
+
+.win-modal {
+    display: block;
+    align-items: center;
+}
+
+.form-container {
+    width: 40%;
+}
+
+.user-input {
+    border-radius: 5px;
+}
